@@ -34,40 +34,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _enviarEmail() async {
     var senha = await new Arquivo().getFileSenha();
-    var remetentes = [
-      'leonardorfarias@fac.pe.senac.br',
-      'flaviarsandrade@fac.pe.senac.br',
-      'lucasbnmedeiros@fac.pe.senac.br',
-      'elvisssilva@fac.pe.senac.br',
-      'gabrielrmendes@fac.pe.senac.br',
-      'hebertonaaborges@fac.pe.senac.br',
-      'nicollyfbfigueiredo@fac.pe.senac.br',
-      'igorcaribeiro@fac.pe.senac.br',
-      'andrebsilva@fac.pe.senac.br',
-      'joaoptsilva@fac.pe.senac.br',
-      'thalitabbarros@fac.pe.senac.br',
-      'arthurscsilva@fac.pe.senac.br',
-      'matheusvgsilva@fac.pe.senac.br',
-      'rayzawmsouza@fac.pe.senac.br',
-      'hevertonacborges@fac.pe.senac.br',
-      'leonardofcsilva@fac.pe.senac.br',
-      'alissongsoliveira@fac.pe.senac.br',
-      'edmilsonaasfilho@fac.pe.senac.br',
-      'marcilioccsilva@fac.pe.senac.br',
-      'flaviabsouza@fac.pe.senac.br',
-      'anajuliabguedes@fac.pe.senac.br',
-      'leondrsilva@uis.pe.senac.br',
-      'luanjaquino@fac.pe.senac.br',
-      'heitorcroliveira@fac.pe.senac.br',
-      'gabrielassantos@fac.pe.senac.br'
-    ];
+    var remetentes = ['email - 1', 'email - 2', 'email - 3'];
 
-    var email = new Email('gigbapp@gmail.com', senha);
+    var email = new Email('xxx@gmail.com', senha);
 
     bool resultado = await email.enviarMensagem(
         "Testando o envio de mensagem no Flutter",
         remetentes,
-        "Hello World - GIG B");
+        "Hello World");
 
     setState(() {
       _texto = resultado ? 'Mensagem Enviada' : 'Erro ao enviar a mensagem';

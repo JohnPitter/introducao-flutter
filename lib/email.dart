@@ -17,7 +17,7 @@ class Email {
   Future<bool> enviarMensagem(
       String mensagem, destinatarios, String assunto) async {
     final enviarMensagem = Message()
-      ..from = Address(email, 'GIG B')
+      ..from = Address(email, 'Nome')
       ..recipients.addAll(destinatarios)
       ..subject = assunto
       ..text = mensagem
